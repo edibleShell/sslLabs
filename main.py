@@ -12,7 +12,6 @@ def analyze(host, publish, startNew, fromCache, maxAge,
     )
     res = requests.get(url, headers=headers)
     res = res.json()
-    #print(res['status'])
 
     while res['status'] != 'READY':
         if res['status'] != 'IN_PROGRESS':
